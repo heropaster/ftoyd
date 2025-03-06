@@ -1,0 +1,21 @@
+@font-face {
+  font-family: 'Tactic Sans';
+  src: url('../../../assets/fonts/TacticSans-Reg.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Tactic Sans';
+  src: url('../../../assets/fonts/TacticSans-RegIt.woff') format('woff');
+  font-weight: 400;
+  font-style: italic;
+}
+
+.title {
+  font-family: 'Tactic Sans', sans-serif;
+}
+
+.italic {
+  font-style: italic;
+}
