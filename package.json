@@ -7,8 +7,8 @@
     "dev": "vite",
     "build": "concurrently --kill-others-on-fail  \"yarn:tsc\" \"yarn:vite-build\"",
     "preview": "vite preview",
-    "lint-fix": "eslint --fix 'src/**/*.{ts,tsx,json}'",
-    "lint-cache": "eslint --cache 'src/**/*.{ts,tsx,json}'",
+    "lint-fix": "eslint --fix \"src/**/*.{ts,tsx,json}\"",
+    "lint-cache": "eslint --cache \"src/**/*.{ts,tsx,json}\"",
     "format": "prettier --write 'src/**/*.{ts,tsx,css,scss,md,json}'",
     "openapi-generate": "npx openapi-generator-cli generate",
     "tsc": "tsc -b",
@@ -18,10 +18,12 @@
     "@tanstack/react-query": "^5.67.1",
     "axios": "^1.8.1",
     "babel-plugin-react-compiler": "19.0.0-beta-40c6c23-20250301",
+    "clsx": "^2.1.1",
     "concurrently": "^9.1.2",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "zustand": "^5.0.3"
+    "react-spinners": "^0.15.0",
+    "react-svg": "^16.3.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.21.0",
