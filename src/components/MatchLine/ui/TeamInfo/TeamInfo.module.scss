@@ -1,0 +1,9 @@
+.teamContainer {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.right {
+  flex-direction: row-reverse;
+}

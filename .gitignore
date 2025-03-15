@@ -7,10 +7,14 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
+
 node_modules
 dist
 dist-ssr
 *.local
+
+#cache
+.eslintcache
 
 # Editor directories and files
 .vscode/*
@@ -22,3 +26,20 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Yarn
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
+
+
+# TypeScript incremental build files
+*.tsbuildinfo
+
+# Compiled vite.config.ts
+vite.config.d.ts
+vite.config.js

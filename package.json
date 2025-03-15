@@ -5,25 +5,52 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build",
-    "lint": "eslint .",
-    "preview": "vite preview"
+    "build": "concurrently --kill-others-on-fail  \"yarn:tsc\" \"yarn:vite-build\"",
+    "preview": "vite preview",
+    "lint-fix": "eslint --fix \"src/**/*.{ts,tsx,json}\"",
+    "lint-cache": "eslint --cache \"src/**/*.{ts,tsx,json}\"",
+    "format": "prettier --write 'src/**/*.{ts,tsx,css,scss,md,json}'",
+    "openapi-generate": "npx openapi-generator-cli generate",
+    "tsc": "tsc -b",
+    "vite-build": "vite build"
   },
   "dependencies": {
+    "@tanstack/react-query": "^5.67.1",
+    "axios": "^1.8.1",
+    "babel-plugin-react-compiler": "19.0.0-beta-40c6c23-20250301",
+    "clsx": "^2.1.1",
+    "concurrently": "^9.1.2",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react-dom": "^19.0.0",
+    "react-spinners": "^0.15.0",
+    "react-svg": "^16.3.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.21.0",
+    "@openapitools/openapi-generator-cli": "^2.17.0",
+    "@tanstack/eslint-plugin-query": "^5.66.1",
     "@types/react": "^19.0.10",
     "@types/react-dom": "^19.0.4",
+    "@typescript-eslint/parser": "^8.26.0",
     "@vitejs/plugin-react": "^4.3.4",
     "eslint": "^9.21.0",
+    "eslint-config-prettier": "^10.0.2",
+    "eslint-import-resolver-typescript": "^3.8.3",
+    "eslint-plugin-import-x": "^4.6.1",
+    "eslint-plugin-prettier": "^5.2.3",
+    "eslint-plugin-react": "^7.37.4",
+    "eslint-plugin-react-compiler": "19.0.0-beta-40c6c23-20250301",
     "eslint-plugin-react-hooks": "^5.1.0",
     "eslint-plugin-react-refresh": "^0.4.19",
+    "eslint-plugin-sonarjs": "^3.0.2",
+    "eslint-plugin-unicorn": "^57.0.0",
     "globals": "^15.15.0",
+    "prettier": "^3.5.3",
+    "sass": "^1.85.1",
     "typescript": "~5.7.2",
     "typescript-eslint": "^8.24.1",
-    "vite": "^6.2.0"
-  }
+    "vite": "^6.2.0",
+    "vite-tsconfig-paths": "^5.1.4"
+  },
+  "packageManager": "yarn@4.6.0"
 }
