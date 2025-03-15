@@ -6,6 +6,8 @@
   "scripts": {
     "dev": "vite",
     "build": "concurrently --kill-others-on-fail  \"yarn:tsc\" \"yarn:vite-build\"",
+    "predeploy": "yarn vite-build",
+    "deploy": "gh-pages -d dist",
     "preview": "vite preview",
     "lint-fix": "eslint --fix \"src/**/*.{ts,tsx,json}\"",
     "lint-cache": "eslint --cache \"src/**/*.{ts,tsx,json}\"",
@@ -29,6 +31,7 @@
     "@eslint/js": "^9.21.0",
     "@openapitools/openapi-generator-cli": "^2.17.0",
     "@tanstack/eslint-plugin-query": "^5.66.1",
+    "@types/gh-pages": "^6",
     "@types/react": "^19.0.10",
     "@types/react-dom": "^19.0.4",
     "@typescript-eslint/parser": "^8.26.0",
@@ -44,6 +47,7 @@
     "eslint-plugin-react-refresh": "^0.4.19",
     "eslint-plugin-sonarjs": "^3.0.2",
     "eslint-plugin-unicorn": "^57.0.0",
+    "gh-pages": "^6.3.0",
     "globals": "^15.15.0",
     "prettier": "^3.5.3",
     "sass": "^1.85.1",
@@ -52,5 +56,6 @@
     "vite": "^6.2.0",
     "vite-tsconfig-paths": "^5.1.4"
   },
+  "homepage": "https://heropaster.github.io/ftoyd",
   "packageManager": "yarn@4.6.0"
 }
